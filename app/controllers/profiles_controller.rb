@@ -4,6 +4,10 @@ class ProfilesController < ApplicationController
   end
 
   def show
-    @tweets = TwitterClient.get_profile(params[:id])
+    if params[:id].blank?
+      redirect_to profiles_path, notice: "Invalid handle"
+    end
+
+    @profile = Profile.new(params[:id])
   end
 end

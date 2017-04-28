@@ -4,7 +4,9 @@ default: &default
     - StephenAtHome
     - johnlegend
     - realDonaldTrump
-
+    - TheOnion
+    - AnnaKendrick47
+    - VP
 development:
   <<: *default
 
