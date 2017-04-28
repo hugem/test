@@ -3,5 +3,6 @@ class ProfilesController < ApplicationController
   end
 
   def show
+    @tweets = TwitterClient.get_profile(params[:id])
   end
 end

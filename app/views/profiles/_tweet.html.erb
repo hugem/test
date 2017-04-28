@@ -1,0 +1,7 @@
+<div>
+  <p><%= tweet.text %></p>
+  <p><%= time_ago_in_words tweet.created_at %></p>
+  <% tweet.user_mentions.each do |mention| %>
+    <p><%= link_to mention[:screen_name], profiles_path(mention[:screen_name]) %></p>
+  <% end %>
+</div>
