@@ -6,5 +6,5 @@
 
 <h2><%= @copy["description"] %></h2>
 <% @copy["profiles"].each do |profile| %>
-  <p><%= link_to profile, profile_path(profile) %></p>
+  <p><%= link_to_profile profile %></p>
 <% end %>

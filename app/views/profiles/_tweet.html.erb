@@ -5,7 +5,7 @@
     <div class="mentions">
       Mentions:
       <% tweet.user_mentions.each do |mention| %>
-        <span><%= link_to mention.screen_name, profile_path(mention.screen_name) %></span>
+        <span><%= link_to_profile mention.screen_name %></span>
       <% end %>
     </div>
   <% end %>
