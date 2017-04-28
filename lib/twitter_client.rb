@@ -1,5 +1,4 @@
 class TwitterClient
-
   def self.get_profile(handle)
     client.user_timeline(handle, count: 25)
   end
@@ -10,5 +9,4 @@ class TwitterClient
       config.consumer_secret     = ENV['TWITTER_CONSUMER_SECRET']
     end
   end
-
 end
