@@ -1,0 +1,16 @@
+default: &default
+  description: Funny people on Twitter
+  profiles:
+    - StephenAtHome
+    - johnlegend
+    - realDonaldTrump
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+  database: db/test.sqlite3
+
+production:
+  <<: *default

@@ -1,7 +1,13 @@
-<div>
-  <p><%= tweet.text %></p>
-  <p><%= time_ago_in_words tweet.created_at %></p>
-  <% tweet.user_mentions.each do |mention| %>
-    <p><%= link_to mention[:screen_name], profile_path(mention[:screen_name]) %></p>
+<div class="tweet">
+  <p class="text"><%= tweet.text %></p>
+  <hr>
+  <% if tweet.user_mentions.size > 0 %>
+    <div class="mentions">
+      Mentions:
+      <% tweet.user_mentions.each do |mention| %>
+        <span><%= link_to mention[:screen_name], profile_path(mention[:screen_name]) %></span>
+      <% end %>
+    </div>
   <% end %>
+  <span class="timestamp"><%= time_ago_in_words tweet.created_at %> ago</span>
 </div>
